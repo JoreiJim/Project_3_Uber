@@ -3,16 +3,20 @@
 
 header
   position: relative
+  height: 50px
 
 nav
+  position: fixed
+  width: 100%
   height: 51px
   background: #212121
-
+  z-index: 5
 header
-  position: fixed
+  
   left: 0
   top: 0
   width: 100%
+
 
 .menu
   display: flex
@@ -21,6 +25,7 @@ header
   padding: 10px 70px
   margin: 0 auto
   list-style-type: none
+	
 
   .menu_link
     color: #ffffff
@@ -33,6 +38,7 @@ header
 
 .subheader
   position: absolute
+  top: 50px
   width: 100%
   height: 84px
   background-color: rgba(0, 0, 0, 0.6)
@@ -126,7 +132,7 @@ header
     font-weight: 400
     text-transform: uppercase
 
-.benefits,.mobile
+.benefits,.mobile,.choice
   .label
     display: flex
     justify-content: center
@@ -143,7 +149,14 @@ header
     text-transform: uppercase
     color: #FFFFFF
     text-align: center
-
+  .label_white
+    background: #FFFFFF
+    color: #070716
+    
+    font-style: normal
+    font-weight: 400
+    font-size: 11px
+    text-transform: uppercase
   .title
     display: flex
     justify-content: center
@@ -153,13 +166,28 @@ header
     margin-top: 32px
     text-transform: uppercase
     color: #222222
+  .title_white
+    font-style: normal
+    font-weight: 700
+    font-size: 38px
+    color: #FFFFFF
 
 .subtitle
-    margin-top: 19px
-    color: #222
-    font-size: 17px
-    font-weight: 400
-    text-align: center
+  margin-top: 19px
+  color: #222
+  font-size: 17px
+  font-weight: 400
+  text-align: center
+.subtitle
+  display: flex
+  justify-content: center
+  align-items: center
+  text-align: center
+  margin-top: 1px
+  front-style: normal
+  font-weight: 400
+  font-size: 17px
+  color: #FFFFFF
     
 .nenefits .row .benefits_column
   display: flex
@@ -252,8 +280,68 @@ header
       border-radius: 100%
       padding: 6px
       cursor: pointer
-      
+
+/* .choice
+  position: relative
+	min-height: 895px
+	padding: 57px 0 138px 0
+  background: url('../img/bg/sideways_bg.png') center (center/cover) no-repeat 
+  &_img 
+		position: relative
+		display: block
+		margin: 56px auto 0 auto
+		z-index: 2
+	&_descr 
+		text-align: center
+		color: #222222
+		font-size: 17px
+		font-weight: 300
+		line-height: 24px
+	.black 
+		position: absolute 
+    background-color: #070716
+		top: 0
+		left: 0
+		height: 499px
+		width: 800px
+		
+		z-index: 1  */
 
 
 
 
+
+  
+.choice
+	min-height: 895px
+	padding: 57px 0 138px 0
+	background: url('../img/bg/sideways_bg.png') center (center/cover) no-repeat
+	position: relative
+	z-index: 1	
+	&_img
+    display: flex
+    margin: 0 auto
+    margin-top: 54px
+    width: 759px
+    height: 480px  
+	.black
+		position: absolute    
+		left: 0
+		top: 0
+		height: 540px
+		width: 100%
+		background-color: #070716 
+		z-index: -1
+  .label_white
+    background: #FFFFFF
+    
+    
+.choice_descr
+  display: flex
+  justify-content: center
+  font-style: normal
+  font-weight: 300
+  font-size: 20px
+  line-height: 24px
+  text-align: center
+  color: #222222
